@@ -1,0 +1,6 @@
+2025-11-28 08:58:20,556 - __main__ - INFO - Initializing configuration...
+2025-11-28 08:58:20,556 - root - WARNING - Could not load config: 'Settings'. Using defaults.
+2025-11-28 08:58:20,557 - __main__ - INFO - Loading data...
+2025-11-28 08:58:20,557 - data_loader - INFO - Loading data from: ./data/merged_file.csv
+2025-11-28 08:58:20,558 - data_loader - ERROR - Data file not found: ./data/merged_file.csv
+2025-11-28 08:58:20,558 - __main__ - ERROR - Failed to load data. Exiting.

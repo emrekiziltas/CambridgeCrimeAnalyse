@@ -1,0 +1,19 @@
+============================================================
+CAMBRIDGE CRIME ANALYSIS - SUMMARY REPORT
+============================================================
+
+Total crimes analyzed: 90,957
+Date range: 2024-09-01 00:00:00 to 2025-09-01 00:00:00
+
+Most common crime: Violence and sexual offences
+  Count: 32,063 (35.2%)
+
+Highest crime area: Peterborough 014A
+  Count: 2,826 (3.2%)
+
+Safest area: Babergh 002B
+  Count: 1 (0.0%)
+
+Most common outcome: Unable to prosecute suspect
+  Count: 30,499 (40.5%)
+
