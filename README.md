@@ -154,7 +154,7 @@ To publish your interactive report:
 4. Select folder: `/docs`
 5. Save
 
-Your report will be live at: `https://emrekiziltas.github.io/CambridgeCrimeAnalyse/`
+Your report will be live at `https://github.com/emrekiziltas/CambridgeCrimeAnalyse`
 
 ## 📄 License
 
@@ -162,7 +162,7 @@ This project is open source and available under the MIT License.
 
 ## 👤 Author
 
-Your Name
+Emre Kiziltas
 - GitHub: [@emrekiziltas](https://github.com/emrekiziltas)
 
 
