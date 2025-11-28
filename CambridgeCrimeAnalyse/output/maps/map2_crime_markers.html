@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_aa5143608b2c9e383da05efdd04b897a {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_aa5143608b2c9e383da05efdd04b897a" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_aa5143608b2c9e383da05efdd04b897a = L.map(
+                "map_aa5143608b2c9e383da05efdd04b897a",
+                {
+                    center: [52.409395245749046, -0.05529212372585076],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_cb1fd4ce16681d4391c2fc7951a68ba8 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_cb1fd4ce16681d4391c2fc7951a68ba8.addTo(map_aa5143608b2c9e383da05efdd04b897a);
+        
+    
+            var marker_bff877d91c52ec4760916d60ce13fc9c = L.marker(
+                [52.574355, -0.24207],
+                {
+}
+            ).addTo(map_aa5143608b2c9e383da05efdd04b897a);
+        
+    
+            var icon_0ef9af4c263e244ee11b6d4c1f7cb57d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-triangle",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_54857bf6836e8046a9ffe289988f2c9f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_25aeaf306c30ce51e0be0ab495db6a3a = $(`<div id="html_25aeaf306c30ce51e0be0ab495db6a3a" style="width: 100.0%; height: 100.0%;"><b>HIGH CRIME AREA</b><br>Total Crimes: 512.0</div>`)[0];
+                popup_54857bf6836e8046a9ffe289988f2c9f.setContent(html_25aeaf306c30ce51e0be0ab495db6a3a);
+            
+        
+
+        marker_bff877d91c52ec4760916d60ce13fc9c.bindPopup(popup_54857bf6836e8046a9ffe289988f2c9f)
+        ;
+
+        
+    
+    
+            marker_bff877d91c52ec4760916d60ce13fc9c.bindTooltip(
+                `<div>
+                     512.0 crimes
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_bff877d91c52ec4760916d60ce13fc9c.setIcon(icon_0ef9af4c263e244ee11b6d4c1f7cb57d);
+            
+    
+            var marker_37824c1eb1647a808d41abe268ca2acf = L.marker(
+                [52.203097, 0.121806],
+                {
+}
+            ).addTo(map_aa5143608b2c9e383da05efdd04b897a);
+        
+    
+            var icon_8e2e96a7c08dcb6b94e271b9af609308 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-triangle",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0ddb4e824b1b9f84bde7376f3a97f23f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_acbaf3139090f0def03d47aa08a0a67f = $(`<div id="html_acbaf3139090f0def03d47aa08a0a67f" style="width: 100.0%; height: 100.0%;"><b>HIGH CRIME AREA</b><br>Total Crimes: 476.0</div>`)[0];
+                popup_0ddb4e824b1b9f84bde7376f3a97f23f.setContent(html_acbaf3139090f0def03d47aa08a0a67f);
+            
+        
+
+        marker_37824c1eb1647a808d41abe268ca2acf.bindPopup(popup_0ddb4e824b1b9f84bde7376f3a97f23f)
+        ;
+
+        
+    
+    
+            marker_37824c1eb1647a808d41abe268ca2acf.bindTooltip(
+                `<div>
+                     476.0 crimes
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_37824c1eb1647a808d41abe268ca2acf.setIcon(icon_8e2e96a7c08dcb6b94e271b9af609308);
+            
+    
+            var marker_c1ac4e1d09fb6a9b6ec113d561cda542 = L.marker(
+                [52.227077, 0.145491],
+                {
+}
+            ).addTo(map_aa5143608b2c9e383da05efdd04b897a);
+        
+    
+            var icon_71ce79dc2d424e4ad0714fccb73c6229 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-triangle",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4230b7504f42faf217569934dd85afe5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_658db3dc5b5bef2ad247c0f2d0a9f3ed = $(`<div id="html_658db3dc5b5bef2ad247c0f2d0a9f3ed" style="width: 100.0%; height: 100.0%;"><b>HIGH CRIME AREA</b><br>Total Crimes: 379.0</div>`)[0];
+                popup_4230b7504f42faf217569934dd85afe5.setContent(html_658db3dc5b5bef2ad247c0f2d0a9f3ed);
+            
+        
+
+        marker_c1ac4e1d09fb6a9b6ec113d561cda542.bindPopup(popup_4230b7504f42faf217569934dd85afe5)
+        ;
+
+        
+    
+    
+            marker_c1ac4e1d09fb6a9b6ec113d561cda542.bindTooltip(
+                `<div>
+                     379.0 crimes
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c1ac4e1d09fb6a9b6ec113d561cda542.setIcon(icon_71ce79dc2d424e4ad0714fccb73c6229);
+            
+    
+            var marker_6c931d2c37a50e125a70bc5698d42ba9 = L.marker(
+                [52.222426, 0.156256],
+                {
+}
+            ).addTo(map_aa5143608b2c9e383da05efdd04b897a);
+        
+    
+            var icon_92decc20ddebe0f9dff68ead4413e2bf = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-triangle",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8e6a3e37ed26a2f776fa99311b539a0f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c90fc805ac153f9a18db621e9ad36ce0 = $(`<div id="html_c90fc805ac153f9a18db621e9ad36ce0" style="width: 100.0%; height: 100.0%;"><b>HIGH CRIME AREA</b><br>Total Crimes: 336.0</div>`)[0];
+                popup_8e6a3e37ed26a2f776fa99311b539a0f.setContent(html_c90fc805ac153f9a18db621e9ad36ce0);
+            
+        
+
+        marker_6c931d2c37a50e125a70bc5698d42ba9.bindPopup(popup_8e6a3e37ed26a2f776fa99311b539a0f)
+        ;
+
+        
+    
+    
+            marker_6c931d2c37a50e125a70bc5698d42ba9.bindTooltip(
+                `<div>
+                     336.0 crimes
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6c931d2c37a50e125a70bc5698d42ba9.setIcon(icon_92decc20ddebe0f9dff68ead4413e2bf);
+            
+    
+            var marker_9db0952a8b43858591ea9f49343cbb72 = L.marker(
+                [52.572933, -0.241374],
+                {
+}
+            ).addTo(map_aa5143608b2c9e383da05efdd04b897a);
+        
+    
+            var icon_e0af6a9e6df379402aff4f0040814762 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ac3f4ee4ae5d9b42766b8aa39be74f4f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5c51ccfe026e9eb312c5cd4418334624 = $(`<div id="html_5c51ccfe026e9eb312c5cd4418334624" style="width: 100.0%; height: 100.0%;"><b>HIGH CRIME AREA</b><br>Total Crimes: 331.0</div>`)[0];
+                popup_ac3f4ee4ae5d9b42766b8aa39be74f4f.setContent(html_5c51ccfe026e9eb312c5cd4418334624);
+            
+        
+
+        marker_9db0952a8b43858591ea9f49343cbb72.bindPopup(popup_ac3f4ee4ae5d9b42766b8aa39be74f4f)
+        ;
+
+        
+    
+    
+            marker_9db0952a8b43858591ea9f49343cbb72.bindTooltip(
+                `<div>
+                     331.0 crimes
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9db0952a8b43858591ea9f49343cbb72.setIcon(icon_e0af6a9e6df379402aff4f0040814762);
+            
+    
+            var marker_3bb1e35196a953fae2a7c287e9b8b808 = L.marker(
+                [52.586514, -0.259961],
+                {
+}
+            ).addTo(map_aa5143608b2c9e383da05efdd04b897a);
+        
+    
+            var icon_1a507a356af5784013e6020e9a529188 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a7106b54dd7d3c6c18fae6c80fc22143 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0f5284c28f2d3575c501efb3ea3b7a34 = $(`<div id="html_0f5284c28f2d3575c501efb3ea3b7a34" style="width: 100.0%; height: 100.0%;"><b>HIGH CRIME AREA</b><br>Total Crimes: 331.0</div>`)[0];
+                popup_a7106b54dd7d3c6c18fae6c80fc22143.setContent(html_0f5284c28f2d3575c501efb3ea3b7a34);
+            
+        
+
+        marker_3bb1e35196a953fae2a7c287e9b8b808.bindPopup(popup_a7106b54dd7d3c6c18fae6c80fc22143)
+        ;
+
+        
+    
+    
+            marker_3bb1e35196a953fae2a7c287e9b8b808.bindTooltip(
+                `<div>
+                     331.0 crimes
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3bb1e35196a953fae2a7c287e9b8b808.setIcon(icon_1a507a356af5784013e6020e9a529188);
+            
+    
+            var marker_07a9a5cc3c38592dfb8159208f4de107 = L.marker(
+                [52.588376, -0.275993],
+                {
+}
+            ).addTo(map_aa5143608b2c9e383da05efdd04b897a);
+        
+    
+            var icon_6959f565df1a7fd9f3e501346153179a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0cfa489213712a995e1645adaf79faeb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_847cff2888d21d65dfe195dee3daafb4 = $(`<div id="html_847cff2888d21d65dfe195dee3daafb4" style="width: 100.0%; height: 100.0%;"><b>HIGH CRIME AREA</b><br>Total Crimes: 289.0</div>`)[0];
+                popup_0cfa489213712a995e1645adaf79faeb.setContent(html_847cff2888d21d65dfe195dee3daafb4);
+            
+        
+
+        marker_07a9a5cc3c38592dfb8159208f4de107.bindPopup(popup_0cfa489213712a995e1645adaf79faeb)
+        ;
+
+        
+    
+    
+            marker_07a9a5cc3c38592dfb8159208f4de107.bindTooltip(
+                `<div>
+                     289.0 crimes
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_07a9a5cc3c38592dfb8159208f4de107.setIcon(icon_6959f565df1a7fd9f3e501346153179a);
+            
+    
+            var marker_ba3052b5c9d45253a64f8bb713926474 = L.marker(
+                [52.649756, 0.15861],
+                {
+}
+            ).addTo(map_aa5143608b2c9e383da05efdd04b897a);
+        
+    
+            var icon_f3ae5b32fa67d614392d8c3adab558ee = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e1b47736b463a99b44c17a9b26d9111c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_540d671cdc33a78cf0e9beba4426ec25 = $(`<div id="html_540d671cdc33a78cf0e9beba4426ec25" style="width: 100.0%; height: 100.0%;"><b>HIGH CRIME AREA</b><br>Total Crimes: 289.0</div>`)[0];
+                popup_e1b47736b463a99b44c17a9b26d9111c.setContent(html_540d671cdc33a78cf0e9beba4426ec25);
+            
+        
+
+        marker_ba3052b5c9d45253a64f8bb713926474.bindPopup(popup_e1b47736b463a99b44c17a9b26d9111c)
+        ;
+
+        
+    
+    
+            marker_ba3052b5c9d45253a64f8bb713926474.bindTooltip(
+                `<div>
+                     289.0 crimes
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ba3052b5c9d45253a64f8bb713926474.setIcon(icon_f3ae5b32fa67d614392d8c3adab558ee);
+            
+    
+            var marker_eedd5c7db4d7e79390f17772385bdc94 = L.marker(
+                [52.572841, -0.246056],
+                {
+}
+            ).addTo(map_aa5143608b2c9e383da05efdd04b897a);
+        
+    
+            var icon_aeb6c9fd62c4524aa2ba819cc0dc9f9a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_71ff5fb8f7f2787346af37f1676e26bb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f829fa6bcfabfb6b67a80e3af2333575 = $(`<div id="html_f829fa6bcfabfb6b67a80e3af2333575" style="width: 100.0%; height: 100.0%;"><b>HIGH CRIME AREA</b><br>Total Crimes: 284.0</div>`)[0];
+                popup_71ff5fb8f7f2787346af37f1676e26bb.setContent(html_f829fa6bcfabfb6b67a80e3af2333575);
+            
+        
+
+        marker_eedd5c7db4d7e79390f17772385bdc94.bindPopup(popup_71ff5fb8f7f2787346af37f1676e26bb)
+        ;
+
+        
+    
+    
+            marker_eedd5c7db4d7e79390f17772385bdc94.bindTooltip(
+                `<div>
+                     284.0 crimes
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_eedd5c7db4d7e79390f17772385bdc94.setIcon(icon_aeb6c9fd62c4524aa2ba819cc0dc9f9a);
+            
+    
+            var marker_5904f99de522d8703c18d488fce9aee1 = L.marker(
+                [52.599914, -0.266946],
+                {
+}
+            ).addTo(map_aa5143608b2c9e383da05efdd04b897a);
+        
+    
+            var icon_1e094577b8906b14f16f78820fbb374b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_215f2b293a1b49210a91d0333da6cb25 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e1a1ccf1fbed7112aada14f3b6485cf8 = $(`<div id="html_e1a1ccf1fbed7112aada14f3b6485cf8" style="width: 100.0%; height: 100.0%;"><b>HIGH CRIME AREA</b><br>Total Crimes: 282.0</div>`)[0];
+                popup_215f2b293a1b49210a91d0333da6cb25.setContent(html_e1a1ccf1fbed7112aada14f3b6485cf8);
+            
+        
+
+        marker_5904f99de522d8703c18d488fce9aee1.bindPopup(popup_215f2b293a1b49210a91d0333da6cb25)
+        ;
+
+        
+    
+    
+            marker_5904f99de522d8703c18d488fce9aee1.bindTooltip(
+                `<div>
+                     282.0 crimes
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5904f99de522d8703c18d488fce9aee1.setIcon(icon_1e094577b8906b14f16f78820fbb374b);
+            
+    
+            var marker_0a76c5067f55f6cf8efa3ee8e8324e72 = L.marker(
+                [52.575782, 0.080885],
+                {
+}
+            ).addTo(map_aa5143608b2c9e383da05efdd04b897a);
+        
+    
+            var icon_db6ddbb59e050563c36c9bc4e05d32d3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "yellow",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f2d18025af352b3c622d0b59124d0d66 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ecf4bf2eb74d72b709861e7bcf0743d7 = $(`<div id="html_ecf4bf2eb74d72b709861e7bcf0743d7" style="width: 100.0%; height: 100.0%;"><b>HIGH CRIME AREA</b><br>Total Crimes: 254.0</div>`)[0];
+                popup_f2d18025af352b3c622d0b59124d0d66.setContent(html_ecf4bf2eb74d72b709861e7bcf0743d7);
+            
+        
+
+        marker_0a76c5067f55f6cf8efa3ee8e8324e72.bindPopup(popup_f2d18025af352b3c622d0b59124d0d66)
+        ;
+
+        
+    
+    
+            marker_0a76c5067f55f6cf8efa3ee8e8324e72.bindTooltip(
+                `<div>
+                     254.0 crimes
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0a76c5067f55f6cf8efa3ee8e8324e72.setIcon(icon_db6ddbb59e050563c36c9bc4e05d32d3);
+            
+    
+            var marker_e9fe9498debe4186cba8174e2cdb0423 = L.marker(
+                [52.572052, -0.243785],
+                {
+}
+            ).addTo(map_aa5143608b2c9e383da05efdd04b897a);
+        
+    
+            var icon_74327ff2181a0a2e91ccf6081fd031f5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "yellow",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4402cc43a46eb571aca298042ed4e6f5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2afdc2eed07aebc0f38e0a604fe2f945 = $(`<div id="html_2afdc2eed07aebc0f38e0a604fe2f945" style="width: 100.0%; height: 100.0%;"><b>HIGH CRIME AREA</b><br>Total Crimes: 245.0</div>`)[0];
+                popup_4402cc43a46eb571aca298042ed4e6f5.setContent(html_2afdc2eed07aebc0f38e0a604fe2f945);
+            
+        
+
+        marker_e9fe9498debe4186cba8174e2cdb0423.bindPopup(popup_4402cc43a46eb571aca298042ed4e6f5)
+        ;
+
+        
+    
+    
+            marker_e9fe9498debe4186cba8174e2cdb0423.bindTooltip(
+                `<div>
+                     245.0 crimes
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e9fe9498debe4186cba8174e2cdb0423.setIcon(icon_74327ff2181a0a2e91ccf6081fd031f5);
+            
+    
+            var marker_a1bea5dd4d8a7c43eb9ba167af8b420a = L.marker(
+                [52.191743, 0.153937],
+                {
+}
+            ).addTo(map_aa5143608b2c9e383da05efdd04b897a);
+        
+    
+            var icon_8b0236026335aff35f7ec9eb0aed30ea = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "yellow",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_93ee5afb7334bf36656de450dc0c67b8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_53039ac65f05216bc24d4782adf94b1c = $(`<div id="html_53039ac65f05216bc24d4782adf94b1c" style="width: 100.0%; height: 100.0%;"><b>HIGH CRIME AREA</b><br>Total Crimes: 232.0</div>`)[0];
+                popup_93ee5afb7334bf36656de450dc0c67b8.setContent(html_53039ac65f05216bc24d4782adf94b1c);
+            
+        
+
+        marker_a1bea5dd4d8a7c43eb9ba167af8b420a.bindPopup(popup_93ee5afb7334bf36656de450dc0c67b8)
+        ;
+
+        
+    
+    
+            marker_a1bea5dd4d8a7c43eb9ba167af8b420a.bindTooltip(
+                `<div>
+                     232.0 crimes
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a1bea5dd4d8a7c43eb9ba167af8b420a.setIcon(icon_8b0236026335aff35f7ec9eb0aed30ea);
+            
+    
+            var marker_3c6cdcdf227937d91fc44f0ed679ad0d = L.marker(
+                [52.574154, -0.294732],
+                {
+}
+            ).addTo(map_aa5143608b2c9e383da05efdd04b897a);
+        
+    
+            var icon_c62c2f092dc3c7cdfddddf282ef292dc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "yellow",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9d8f2c25092fae802fde77dc993bcc7c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dc9cb4d55fe8b262f4b2d6df48b37c1c = $(`<div id="html_dc9cb4d55fe8b262f4b2d6df48b37c1c" style="width: 100.0%; height: 100.0%;"><b>HIGH CRIME AREA</b><br>Total Crimes: 232.0</div>`)[0];
+                popup_9d8f2c25092fae802fde77dc993bcc7c.setContent(html_dc9cb4d55fe8b262f4b2d6df48b37c1c);
+            
+        
+
+        marker_3c6cdcdf227937d91fc44f0ed679ad0d.bindPopup(popup_9d8f2c25092fae802fde77dc993bcc7c)
+        ;
+
+        
+    
+    
+            marker_3c6cdcdf227937d91fc44f0ed679ad0d.bindTooltip(
+                `<div>
+                     232.0 crimes
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3c6cdcdf227937d91fc44f0ed679ad0d.setIcon(icon_c62c2f092dc3c7cdfddddf282ef292dc);
+            
+    
+            var marker_ca2bfbe5dc1aab514628550d390d86f2 = L.marker(
+                [52.204215, 0.121172],
+                {
+}
+            ).addTo(map_aa5143608b2c9e383da05efdd04b897a);
+        
+    
+            var icon_0ff8fa4e56105be97f9b05aea10f65c0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "yellow",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_90957859cc9578d9bc8b263c4f5b270e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0abac4129663bc3910c1a22a79581301 = $(`<div id="html_0abac4129663bc3910c1a22a79581301" style="width: 100.0%; height: 100.0%;"><b>HIGH CRIME AREA</b><br>Total Crimes: 228.0</div>`)[0];
+                popup_90957859cc9578d9bc8b263c4f5b270e.setContent(html_0abac4129663bc3910c1a22a79581301);
+            
+        
+
+        marker_ca2bfbe5dc1aab514628550d390d86f2.bindPopup(popup_90957859cc9578d9bc8b263c4f5b270e)
+        ;
+
+        
+    
+    
+            marker_ca2bfbe5dc1aab514628550d390d86f2.bindTooltip(
+                `<div>
+                     228.0 crimes
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ca2bfbe5dc1aab514628550d390d86f2.setIcon(icon_0ff8fa4e56105be97f9b05aea10f65c0);
+            
+    
+            var marker_d9c3c7e5b3fad57452d9a59db70c880d = L.marker(
+                [52.204812, 0.121976],
+                {
+}
+            ).addTo(map_aa5143608b2c9e383da05efdd04b897a);
+        
+    
+            var icon_56220d35fe75640fbd0bf491dc8fea12 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "yellow",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b2dd4acaceb881d322c0f0585fc36f62 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4995218fe3c5d105a3797e560d8ea4ab = $(`<div id="html_4995218fe3c5d105a3797e560d8ea4ab" style="width: 100.0%; height: 100.0%;"><b>HIGH CRIME AREA</b><br>Total Crimes: 221.0</div>`)[0];
+                popup_b2dd4acaceb881d322c0f0585fc36f62.setContent(html_4995218fe3c5d105a3797e560d8ea4ab);
+            
+        
+
+        marker_d9c3c7e5b3fad57452d9a59db70c880d.bindPopup(popup_b2dd4acaceb881d322c0f0585fc36f62)
+        ;
+
+        
+    
+    
+            marker_d9c3c7e5b3fad57452d9a59db70c880d.bindTooltip(
+                `<div>
+                     221.0 crimes
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d9c3c7e5b3fad57452d9a59db70c880d.setIcon(icon_56220d35fe75640fbd0bf491dc8fea12);
+            
+    
+            var marker_546a8c2f279c80cf9a8171eda4d9eac8 = L.marker(
+                [52.331394, -0.056461],
+                {
+}
+            ).addTo(map_aa5143608b2c9e383da05efdd04b897a);
+        
+    
+            var icon_c6effb21f634f93bc3e12bb4b2e73673 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "yellow",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_12c6066c526207b313f80760d25d2f9e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2b2a6d67c783833be18cd26eaffbc6e0 = $(`<div id="html_2b2a6d67c783833be18cd26eaffbc6e0" style="width: 100.0%; height: 100.0%;"><b>HIGH CRIME AREA</b><br>Total Crimes: 210.0</div>`)[0];
+                popup_12c6066c526207b313f80760d25d2f9e.setContent(html_2b2a6d67c783833be18cd26eaffbc6e0);
+            
+        
+
+        marker_546a8c2f279c80cf9a8171eda4d9eac8.bindPopup(popup_12c6066c526207b313f80760d25d2f9e)
+        ;
+
+        
+    
+    
+            marker_546a8c2f279c80cf9a8171eda4d9eac8.bindTooltip(
+                `<div>
+                     210.0 crimes
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_546a8c2f279c80cf9a8171eda4d9eac8.setIcon(icon_c6effb21f634f93bc3e12bb4b2e73673);
+            
+    
+            var marker_c2dc95d38762cd9e0a3666aa3ab7b103 = L.marker(
+                [52.203523, 0.124124],
+                {
+}
+            ).addTo(map_aa5143608b2c9e383da05efdd04b897a);
+        
+    
+            var icon_f5ceba72ff45aad23897f84c5bfb0195 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "yellow",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_603cc661c00b6d411aeb26389462c260 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dc22b67a3ddbac0641089fa3fa396f12 = $(`<div id="html_dc22b67a3ddbac0641089fa3fa396f12" style="width: 100.0%; height: 100.0%;"><b>HIGH CRIME AREA</b><br>Total Crimes: 207.0</div>`)[0];
+                popup_603cc661c00b6d411aeb26389462c260.setContent(html_dc22b67a3ddbac0641089fa3fa396f12);
+            
+        
+
+        marker_c2dc95d38762cd9e0a3666aa3ab7b103.bindPopup(popup_603cc661c00b6d411aeb26389462c260)
+        ;
+
+        
+    
+    
+            marker_c2dc95d38762cd9e0a3666aa3ab7b103.bindTooltip(
+                `<div>
+                     207.0 crimes
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c2dc95d38762cd9e0a3666aa3ab7b103.setIcon(icon_f5ceba72ff45aad23897f84c5bfb0195);
+            
+    
+            var marker_6b69f4ad86236d24779ee56f724ed612 = L.marker(
+                [52.205622, 0.118912],
+                {
+}
+            ).addTo(map_aa5143608b2c9e383da05efdd04b897a);
+        
+    
+            var icon_ecf8c0b04951c7beaa1bc4bbaaa057e1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "yellow",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6face752bdb1078053c82badded3370a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0e168f223d89c3b39496fff90acea6ec = $(`<div id="html_0e168f223d89c3b39496fff90acea6ec" style="width: 100.0%; height: 100.0%;"><b>HIGH CRIME AREA</b><br>Total Crimes: 197.0</div>`)[0];
+                popup_6face752bdb1078053c82badded3370a.setContent(html_0e168f223d89c3b39496fff90acea6ec);
+            
+        
+
+        marker_6b69f4ad86236d24779ee56f724ed612.bindPopup(popup_6face752bdb1078053c82badded3370a)
+        ;
+
+        
+    
+    
+            marker_6b69f4ad86236d24779ee56f724ed612.bindTooltip(
+                `<div>
+                     197.0 crimes
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6b69f4ad86236d24779ee56f724ed612.setIcon(icon_ecf8c0b04951c7beaa1bc4bbaaa057e1);
+            
+    
+            var marker_a8c3d9531618405248e342e8393285a8 = L.marker(
+                [52.569315, -0.241091],
+                {
+}
+            ).addTo(map_aa5143608b2c9e383da05efdd04b897a);
+        
+    
+            var icon_9f114dcf9fc80c32c341f392d00b4682 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "yellow",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_61ea5c1908485680061341f0dd8921c0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_673655e579b5a0ac1c0aab0c7802747b = $(`<div id="html_673655e579b5a0ac1c0aab0c7802747b" style="width: 100.0%; height: 100.0%;"><b>HIGH CRIME AREA</b><br>Total Crimes: 192.0</div>`)[0];
+                popup_61ea5c1908485680061341f0dd8921c0.setContent(html_673655e579b5a0ac1c0aab0c7802747b);
+            
+        
+
+        marker_a8c3d9531618405248e342e8393285a8.bindPopup(popup_61ea5c1908485680061341f0dd8921c0)
+        ;
+
+        
+    
+    
+            marker_a8c3d9531618405248e342e8393285a8.bindTooltip(
+                `<div>
+                     192.0 crimes
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a8c3d9531618405248e342e8393285a8.setIcon(icon_9f114dcf9fc80c32c341f392d00b4682);
+            
+</script>
+</html>
