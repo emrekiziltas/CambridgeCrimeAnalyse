@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-ink TRMNL Simulator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .editor-panel {
+            flex: 1;
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .simulator-panel {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h2 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        textarea {
+            width: 100%;
+            flex: 1;
+            min-height: 300px;
+            padding: 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            resize: vertical;
+            margin-bottom: 15px;
+        }
+
+        textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        button {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        button:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .device-frame {
+            background: #2c2c2c;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+            position: relative;
+        }
+
+        .device-frame::before {
+            content: 'TRMNL';
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #666;
+            font-size: 10px;
+            font-weight: bold;
+        }
+
+        .eink-screen {
+            width: 800px;
+            height: 480px;
+            background: #f4f4f4;
+            border: 3px solid #1a1a1a;
+            border-radius: 4px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .eink-content {
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+            overflow: auto;
+            filter: grayscale(100%) contrast(1.2);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+        }
+
+        .eink-content * {
+            color: #000 !important;
+        }
+
+        .info {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        .info p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .tips {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 15px;
+        }
+
+        .tips h3 {
+            color: #856404;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .tips ul {
+            color: #856404;
+            margin-left: 20px;
+            font-size: 13px;
+        }
+
+        .tips li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="editor-panel">
+        <h2>✏️ HTML/CSS Editor</h2>
+        <textarea id="htmlInput" placeholder="HTML/CSS kodunuzu buraya yazın..."><div style="display: flex; height: 440px; flex-direction: column;">
+    <!-- Ana İçerik Alanı -->
+    <div style="display: flex; flex: 1;">
+        <!-- Sol Taraf - 3 Kişi ve Üniversiteler -->
+        <div style="width: 50%; padding: 30px; border-right: 3px solid black;">
+            <div style="margin-bottom: 40px;">
+                <h2 style="font-size: 32px; margin-bottom: 10px; font-weight: bold;">Dr. Ahmet Yılmaz</h2>
+                <p style="font-size: 18px; color: #333;">Boğaziçi Üniversitesi</p>
+            </div>
+
+            <div style="margin-bottom: 40px;">
+                <h2 style="font-size: 32px; margin-bottom: 10px; font-weight: bold;">Prof. Ayşe Demir</h2>
+                <p style="font-size: 18px; color: #333;">İTÜ</p>
+            </div>
+
+            <div>
+                <h2 style="font-size: 32px; margin-bottom: 10px; font-weight: bold;">Doç. Mehmet Kaya</h2>
+                <p style="font-size: 18px; color: #333;">ODTÜ</p>
+            </div>
+        </div>
+
+        <!-- Sağ Taraf - Büyük Oda Numarası -->
+        <div style="width: 50%; display: flex; align-items: center; justify-content: center;">
+            <div style="border: 4px solid black; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+                <div style="background: black; color: white; padding: 15px; text-align: center;">
+                    <div style="font-size: 24px; font-weight: bold; letter-spacing: 2px;">ODA</div>
+                </div>
+                <div style="background: white; padding: 40px 60px; text-align: center;">
+                    <div style="font-size: 120px; font-weight: bold; line-height: 1;">305</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Alt Banner - INI -->
+    <div style="background: white; border-top: 3px solid black; text-align: center; padding: 20px;">
+        <h1 style="font-size: 42px; font-weight: bold; letter-spacing: 8px; margin: 0; color: black;">INI</h1>
+    </div>
+</div></textarea>
+
+        <button onclick="updatePreview()">🔄 Önizlemeyi Güncelle</button>
+
+        <div class="tips">
+            <h3>💡 E-ink İpuçları:</h3>
+            <ul>
+                <li>Sadece siyah-beyaz renk kullanın</li>
+                <li>Yüksek kontrast tercih edin</li>
+                <li>Büyük fontlar daha okunabilir</li>
+                <li>Ekran boyutu: 800x480 px</li>
+                <li>Çok fazla detaydan kaçının</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="simulator-panel">
+        <div class="device-frame">
+            <div class="eink-screen">
+                <div class="eink-content" id="preview">
+                    <div style="display: flex; height: 440px; flex-direction: column;">
+                        <!-- Ana İçerik Alanı -->
+                        <div style="display: flex; flex: 1;">
+                            <!-- Sol Taraf - 3 Kişi ve Üniversiteler -->
+                            <div style="width: 50%; padding: 30px; border-right: 3px solid black;">
+                                <div style="margin-bottom: 40px;">
+                                    <h2 style="font-size: 32px; margin-bottom: 10px; font-weight: bold;">Dr. Ahmet Yılmaz</h2>
+                                    <p style="font-size: 18px; color: #333;">Boğaziçi Üniversitesi</p>
+                                </div>
+
+                                <div style="margin-bottom: 40px;">
+                                    <h2 style="font-size: 32px; margin-bottom: 10px; font-weight: bold;">Prof. Ayşe Demir</h2>
+                                    <p style="font-size: 18px; color: #333;">İTÜ</p>
+                                </div>
+
+                                <div>
+                                    <h2 style="font-size: 32px; margin-bottom: 10px; font-weight: bold;">Doç. Mehmet Kaya</h2>
+                                    <p style="font-size: 18px; color: #333;">ODTÜ</p>
+                                </div>
+                            </div>
+
+                            <!-- Sağ Taraf - Büyük Oda Numarası -->
+                            <div style="width: 50%; display: flex; align-items: center; justify-content: center;">
+                                <div style="border: 4px solid black; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+                                    <div style="background: black; color: white; padding: 15px; text-align: center;">
+                                        <div style="font-size: 24px; font-weight: bold; letter-spacing: 2px;">ODA</div>
+                                    </div>
+                                    <div style="background: white; padding: 40px 60px; text-align: center;">
+                                        <div style="font-size: 120px; font-weight: bold; line-height: 1;">305</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Alt Banner - INI -->
+                        <div style="background: white; border-top: 3px solid black; text-align: center; padding: 20px;">
+                            <h1 style="font-size: 42px; font-weight: bold; letter-spacing: 8px; margin: 0; color: black;">INI</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="info">
+            <p><strong>TRMNL E-ink Display</strong></p>
+            <p>800 x 480 piksel | Siyah-Beyaz</p>
+        </div>
+    </div>
+
+    <script>
+        function updatePreview() {
+            const html = document.getElementById('htmlInput').value;
+            const preview = document.getElementById('preview');
+            preview.innerHTML = html;
+        }
+
+        // Otomatik güncelleme (opsiyonel)
+        document.getElementById('htmlInput').addEventListener('input', function() {
+            clearTimeout(window.updateTimer);
+            window.updateTimer = setTimeout(updatePreview, 500);
+        });
+    </script>
+</body>
+</html>
